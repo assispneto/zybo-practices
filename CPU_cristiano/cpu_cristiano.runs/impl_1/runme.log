@@ -1,0 +1,303 @@
+
+*** Halting run - EA reset detected ***
+
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1015.754 ; gain = 0.000
+Command: link_design -top design_1_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/assis/cpu_cristiano/cpu_cristiano.srcs/sources_1/bd/design_1/ip/design_1_cpu_0_0/design_1_cpu_0_0.dcp' for cell 'design_1_i/cpu_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/assis/cpu_cristiano/cpu_cristiano.srcs/sources_1/bd/design_1/ip/design_1_cpu_vga_dbg_0_0/design_1_cpu_vga_dbg_0_0.dcp' for cell 'design_1_i/cpu_vga_dbg_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/assis/cpu_cristiano/cpu_cristiano.srcs/sources_1/bd/design_1/ip/design_1_ram_0_0/design_1_ram_0_0.dcp' for cell 'design_1_i/ram_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/assis/cpu_cristiano/cpu_cristiano.srcs/sources_1/bd/design_1/ip/design_1_rom_0_0/design_1_rom_0_0.dcp' for cell 'design_1_i/rom_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/assis/cpu_cristiano/cpu_cristiano.srcs/sources_1/bd/design_1/ip/design_1_terminal_vga_0_0/design_1_terminal_vga_0_0.dcp' for cell 'design_1_i/terminal_vga_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1015.754 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 87 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'VGA_HS_O'. [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VS_O'. [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/assis/OneDrive/햞ea de Trabalho/files_sd_cpu_vga/ZYBO_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1015.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 8 instances
+
+15 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1015.754 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1015.754 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1e4e34fba
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1253.824 ; gain = 238.070
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 196ae1112
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 11 cells and removed 11 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 196ae1112
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1cec42c88
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.220 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 15 cells and removed 8 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_cpu_IBUF_BUFG_inst to drive 193 load(s) on clock net clk_cpu_IBUF_BUFG
+INFO: [Opt 31-194] Inserted BUFG clk50MHz_IBUF_BUFG_inst to drive 63 load(s) on clock net clk50MHz_IBUF_BUFG
+INFO: [Opt 31-194] Inserted BUFG design_1_i/terminal_vga_0/U0/freq_div0/temporal_BUFG_inst to drive 45 load(s) on clock net design_1_i/terminal_vga_0/U0/freq_div0/temporal_BUFG
+INFO: [Opt 31-193] Inserted 3 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 203a8bd95
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.279 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 3 cells of which 3 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 203a8bd95
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.305 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 17da89ace
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.317 . Memory (MB): peak = 1455.914 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              11  |              11  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |              15  |               8  |                                              0  |
+|  BUFG optimization            |               3  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1455.914 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1e4e5cd29
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.421 . Memory (MB): peak = 1455.914 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 1e4e5cd29
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1616.355 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1e4e5cd29
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1616.355 ; gain = 160.441
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1e4e5cd29
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1616.355 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1616.355 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1e4e5cd29
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1616.355 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1616.355 ; gain = 600.602
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1616.355 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/assis/cpu_cristiano/cpu_cristiano.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/assis/cpu_cristiano/cpu_cristiano.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[10] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[7]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[11] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[8]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[12] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[9]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[13] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[10]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[14] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[11]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[3] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[0]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[4] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[1]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[5] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[2]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[6] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[3]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[7] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[4]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[8] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[5]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ADDRARDADDR[9] (net: design_1_i/terminal_vga_0/U0/char_mem_0/W_ADDR[6]) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/s_wr_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg has an input control pin design_1_i/terminal_vga_0/U0/char_mem_0/char_ram_reg/ENARDEN (net: design_1_i/terminal_vga_0/U0/char_mem_0/WE) which is driven by a register (design_1_i/cpu_vga_dbg_0/U0/term_pos_reg[31]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1616.355 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 139e3a12a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1616.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1616.355 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (2) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 2 sites.
+	Term: VGA_HS
+	Term: VGA_VS
+
+
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (2) is greater than number of available sites (0).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 0 sites available on device, but needs 2 sites.
+	Term: VGA_HS
+	Term: VGA_VS
+
+
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    50 |     4 | LVCMOS33(4)                                                            |                                          |        |  +3.30 |    YES |     |
+| 35 |    50 |    15 | LVCMOS33(15)                                                           |                                          |        |  +3.30 |    YES |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   100 |    19 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 34     | VGA_B[0]             | LVCMOS33        | IOB_X0Y21            | P20                  |                      |
+|        | VGA_G[1]             | LVCMOS33        | IOB_X0Y22            | N20                  |                      |
+|        | clk_cpu              | LVCMOS33        | IOB_X0Y36            | Y16                  |                      |
+|        | rst                  | LVCMOS33        | IOB_X0Y9             | R18                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| 35     | VGA_B[1]             | LVCMOS33        | IOB_X0Y85            | M20                  |                      |
+|        | VGA_B[2]             | LVCMOS33        | IOB_X0Y80            | K19                  |                      |
+|        | VGA_B[3]             | LVCMOS33        | IOB_X0Y72            | J18                  |                      |
+|        | VGA_B[4]             | LVCMOS33        | IOB_X0Y64            | G19                  |                      |
+|        | VGA_G[0]             | LVCMOS33        | IOB_X0Y71            | H18                  |                      |
+|        | VGA_G[2]             | LVCMOS33        | IOB_X0Y82            | L19                  |                      |
+|        | VGA_G[3]             | LVCMOS33        | IOB_X0Y79            | J19                  |                      |
+|        | VGA_G[4]             | LVCMOS33        | IOB_X0Y65            | H20                  |                      |
+|        | VGA_G[5]             | LVCMOS33        | IOB_X0Y69            | F20                  |                      |
+|        | VGA_R[0]             | LVCMOS33        | IOB_X0Y86            | M19                  |                      |
+|        | VGA_R[1]             | LVCMOS33        | IOB_X0Y81            | L20                  |                      |
+|        | VGA_R[2]             | LVCMOS33        | IOB_X0Y66            | J20                  |                      |
+|        | VGA_R[3]             | LVCMOS33        | IOB_X0Y63            | G20                  |                      |
+|        | VGA_R[4]             | LVCMOS33        | IOB_X0Y70            | F19                  |                      |
+|        | clk50MHz             | LVCMOS33        | IOB_X0Y78            | L16                  |                      |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11a852a7b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.775 . Memory (MB): peak = 1616.355 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 11a852a7b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.776 . Memory (MB): peak = 1616.355 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 11a852a7b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.777 . Memory (MB): peak = 1616.355 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 23 Warnings, 2 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 15:23:06 2022...

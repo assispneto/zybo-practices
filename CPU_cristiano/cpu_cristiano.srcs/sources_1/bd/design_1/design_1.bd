@@ -1,0 +1,610 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x301BB3A979D037A",
+      "device": "xc7z010clg400-1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "cpu_0": "",
+      "terminal_vga_0": "",
+      "cpu_vga_dbg_0": "",
+      "ram_0": "",
+      "rom_0": ""
+    },
+    "ports": {
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk_cpu": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk50MHz": {
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "",
+            "value_src": "weak"
+          },
+          "FREQ_HZ": {
+            "value": "",
+            "value_src": "weak"
+          },
+          "PHASE": {
+            "value": "",
+            "value_src": "weak"
+          }
+        }
+      },
+      "VGA_HS": {
+        "direction": "O"
+      },
+      "VGA_VS": {
+        "direction": "O"
+      },
+      "VGA_R": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "VGA_B": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "VGA_G": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      }
+    },
+    "components": {
+      "cpu_0": {
+        "vlnv": "xilinx.com:module_ref:cpu:1.0",
+        "xci_name": "design_1_cpu_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "cpu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ROM_en": {
+            "direction": "O"
+          },
+          "ROM_addr": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "IR_data": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ram_din": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ram_dout": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "ram_addr": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "RAM_we": {
+            "direction": "O"
+          },
+          "dbg_r0": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r2": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r3": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r4": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r5": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r6": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_r7": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_ir": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dbg_state": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "terminal_vga_0": {
+        "vlnv": "xilinx.com:module_ref:terminal_vga:1.0",
+        "xci_name": "design_1_terminal_vga_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "terminal_vga",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk50MHz": {
+            "direction": "I"
+          },
+          "RESET": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "W_ADDR": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "DIN": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "WE": {
+            "direction": "I"
+          },
+          "VGA_HS_O": {
+            "direction": "O"
+          },
+          "VGA_VS_O": {
+            "direction": "O"
+          },
+          "VGA_R": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "VGA_B": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "VGA_G": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
+      "cpu_vga_dbg_0": {
+        "vlnv": "xilinx.com:module_ref:cpu_vga_dbg:1.0",
+        "xci_name": "design_1_cpu_vga_dbg_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "cpu_vga_dbg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "r0": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r1": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r2": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r3": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r4": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r5": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r6": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "r7": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "IR": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "PC": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "state": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "w_addr": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "wr": {
+            "direction": "O"
+          }
+        }
+      },
+      "ram_0": {
+        "vlnv": "xilinx.com:module_ref:ram:1.0",
+        "xci_name": "design_1_ram_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ram",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "address": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "din": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "we": {
+            "direction": "I"
+          },
+          "dout": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "rom_0": {
+        "vlnv": "xilinx.com:module_ref:rom:1.0",
+        "xci_name": "design_1_rom_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rom",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "address": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "dout": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "cpu_0_dbg_state": {
+        "ports": [
+          "cpu_0/dbg_state",
+          "cpu_vga_dbg_0/state"
+        ]
+      },
+      "cpu_0_dbg_ir": {
+        "ports": [
+          "cpu_0/dbg_ir",
+          "cpu_vga_dbg_0/IR"
+        ]
+      },
+      "cpu_0_dbg_r7": {
+        "ports": [
+          "cpu_0/dbg_r7",
+          "cpu_vga_dbg_0/r7"
+        ]
+      },
+      "cpu_0_dbg_r6": {
+        "ports": [
+          "cpu_0/dbg_r6",
+          "cpu_vga_dbg_0/r6"
+        ]
+      },
+      "cpu_0_dbg_r5": {
+        "ports": [
+          "cpu_0/dbg_r5",
+          "cpu_vga_dbg_0/r5"
+        ]
+      },
+      "cpu_0_ROM_addr": {
+        "ports": [
+          "cpu_0/ROM_addr",
+          "cpu_vga_dbg_0/PC",
+          "rom_0/address"
+        ]
+      },
+      "cpu_0_dbg_r4": {
+        "ports": [
+          "cpu_0/dbg_r4",
+          "cpu_vga_dbg_0/r4"
+        ]
+      },
+      "cpu_0_dbg_r3": {
+        "ports": [
+          "cpu_0/dbg_r3",
+          "cpu_vga_dbg_0/r3"
+        ]
+      },
+      "cpu_0_dbg_r2": {
+        "ports": [
+          "cpu_0/dbg_r2",
+          "cpu_vga_dbg_0/r2"
+        ]
+      },
+      "cpu_0_dbg_r1": {
+        "ports": [
+          "cpu_0/dbg_r1",
+          "cpu_vga_dbg_0/r1"
+        ]
+      },
+      "cpu_0_dbg_r0": {
+        "ports": [
+          "cpu_0/dbg_r0",
+          "cpu_vga_dbg_0/r0"
+        ]
+      },
+      "cpu_0_RAM_we": {
+        "ports": [
+          "cpu_0/RAM_we",
+          "ram_0/we"
+        ]
+      },
+      "cpu_0_ram_dout": {
+        "ports": [
+          "cpu_0/ram_dout",
+          "ram_0/din"
+        ]
+      },
+      "cpu_0_ram_addr": {
+        "ports": [
+          "cpu_0/ram_addr",
+          "ram_0/address"
+        ]
+      },
+      "cpu_0_ROM_en": {
+        "ports": [
+          "cpu_0/ROM_en",
+          "rom_0/en"
+        ]
+      },
+      "ram_0_dout": {
+        "ports": [
+          "ram_0/dout",
+          "cpu_0/ram_din"
+        ]
+      },
+      "rom_0_dout": {
+        "ports": [
+          "rom_0/dout",
+          "cpu_0/IR_data"
+        ]
+      },
+      "cpu_vga_dbg_0_wr": {
+        "ports": [
+          "cpu_vga_dbg_0/wr",
+          "terminal_vga_0/WE"
+        ]
+      },
+      "cpu_vga_dbg_0_dout": {
+        "ports": [
+          "cpu_vga_dbg_0/dout",
+          "terminal_vga_0/DIN"
+        ]
+      },
+      "cpu_vga_dbg_0_w_addr": {
+        "ports": [
+          "cpu_vga_dbg_0/w_addr",
+          "terminal_vga_0/W_ADDR"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst",
+          "cpu_0/rst",
+          "cpu_vga_dbg_0/rst",
+          "terminal_vga_0/RESET"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_cpu",
+          "cpu_0/clk",
+          "ram_0/clk",
+          "rom_0/clk"
+        ]
+      },
+      "clk50MHz_0_1": {
+        "ports": [
+          "clk50MHz",
+          "terminal_vga_0/clk50MHz",
+          "cpu_vga_dbg_0/clk"
+        ]
+      },
+      "terminal_vga_0_VGA_HS_O": {
+        "ports": [
+          "terminal_vga_0/VGA_HS_O",
+          "VGA_HS"
+        ]
+      },
+      "terminal_vga_0_VGA_VS_O": {
+        "ports": [
+          "terminal_vga_0/VGA_VS_O",
+          "VGA_VS"
+        ]
+      },
+      "terminal_vga_0_VGA_R": {
+        "ports": [
+          "terminal_vga_0/VGA_R",
+          "VGA_R"
+        ]
+      },
+      "terminal_vga_0_VGA_B": {
+        "ports": [
+          "terminal_vga_0/VGA_B",
+          "VGA_B"
+        ]
+      },
+      "terminal_vga_0_VGA_G": {
+        "ports": [
+          "terminal_vga_0/VGA_G",
+          "VGA_G"
+        ]
+      }
+    }
+  }
+}

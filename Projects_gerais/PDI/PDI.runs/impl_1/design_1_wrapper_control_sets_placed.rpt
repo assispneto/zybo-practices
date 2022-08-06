@@ -1,0 +1,94 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Jun 27 15:13:57 2022
+| Host         : DESKTOP-MLS39H4 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    85 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    16 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     7 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              40 |           16 |
+| No           | No                    | Yes                    |               2 |            1 |
+| No           | Yes                   | No                     |              83 |           30 |
+| Yes          | No                    | No                     |              95 |           29 |
+| Yes          | No                    | Yes                    |              15 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |                      Enable Signal                     |                 Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+| ~design_1_i/video_out_0/U0/Sync/s_h_sync_reg_0 |                                                        |                                                 |                1 |              1 |         1.00 |
+|  design_1_i/pdi_0/U0/ram_we_reg_i_1_n_0        |                                                        |                                                 |                1 |              1 |         1.00 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        | rst_IBUF                                        |                1 |              2 |         2.00 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        | design_1_i/video_out_0/U0/Sync/h_count          |                3 |             10 |         3.33 |
+| ~design_1_i/video_out_0/U0/Sync/s_h_sync_reg_0 |                                                        | design_1_i/video_out_0/U0/Sync/v_count          |                3 |             10 |         3.33 |
+|  design_1_i/clk_wiz_0/inst/clk_250             | design_1_i/video_out_0/U0/SR_b/data_bits[9]_i_1__1_n_0 |                                                 |                2 |             10 |         5.00 |
+|  design_1_i/clk_wiz_0/inst/clk_250             | design_1_i/video_out_0/U0/SR_g/data_bits[9]_i_1__0_n_0 |                                                 |                3 |             10 |         3.33 |
+|  design_1_i/clk_wiz_0/inst/clk_250             | design_1_i/video_out_0/U0/SR_r/data_bits[9]_i_1_n_0    |                                                 |                3 |             10 |         3.33 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        | design_1_i/video_out_0/U0/Sync/clear            |                4 |             11 |         2.75 |
+| ~design_1_i/video_out_0/U0/Sync/s_h_sync_reg_0 |                                                        | design_1_i/video_out_0/U0/Sync/v_sync_i_1_n_0   |                4 |             11 |         2.75 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        | design_1_i/pdi_0/U0/addr_dly/int[0][14]_i_1_n_0 |                4 |             15 |         3.75 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       | design_1_i/pdi_0/U0/ram_we                             | rst_IBUF                                        |                4 |             15 |         3.75 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        |                                                 |               10 |             19 |         1.90 |
+|  design_1_i/clk_wiz_0/inst/clk_250             |                                                        |                                                 |                4 |             19 |         4.75 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       |                                                        | design_1_i/video_out_0/U0/Sync/h_active_reg_0   |               12 |             26 |         2.17 |
+|  design_1_i/video_out_0/U0/Sync/CLK_BUFG       | design_1_i/video_out_0/U0/Sync/video_en                |                                                 |               21 |             65 |         3.10 |
++------------------------------------------------+--------------------------------------------------------+-------------------------------------------------+------------------+----------------+--------------+
+
+
